@@ -1,5 +1,9 @@
 {
   "item.modtest.pink_garnet": "Pink Garnet",
   "custom_item_group": "Custom Item Group",
-  "item.modtest.condensed_dirt": "Condensed Dirt"
+  "item.modtest.condensed_dirt": "Condensed Dirt",
+  "item.modtest.guidite_helmet": "guidite_helmet",
+  "item.modtest.guidite_chestplate": "guidite_chestplate",
+  "item.modtest.guidite_leggings": "guidite_leggings",
+  "item.modtest.guidite_boots": "guidite_boots"
 }

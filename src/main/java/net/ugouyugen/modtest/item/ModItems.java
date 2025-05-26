@@ -1,7 +1,9 @@
 package net.ugouyugen.modtest.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -19,6 +21,28 @@ public class ModItems {
             Item::new,
             new Item.Settings()
     );
+    //
+    public static final Item GUIDITE_HELMET = register(
+            "guidite_helmet",
+            settings -> new ArmorItem(GuiditeArmorMaterial.INSTANCE, EquipmentType.HELMET, settings),
+            new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(GuiditeArmorMaterial.BASE_DURABILITY))
+    );
+    public static final Item GUIDITE_CHESTPLATE = register(
+            "guidite_chestplate",
+            settings -> new ArmorItem(GuiditeArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, settings),
+            new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(GuiditeArmorMaterial.BASE_DURABILITY))
+    );
+    public static final Item GUIDITE_LEGGINGS = register(
+            "guidite_leggings",
+            settings -> new ArmorItem(GuiditeArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, settings),
+            new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(GuiditeArmorMaterial.BASE_DURABILITY))
+    );
+    public static final Item GUIDITE_BOOTS = register(
+            "guidite_boots",
+            settings -> new ArmorItem(GuiditeArmorMaterial.INSTANCE, EquipmentType.BOOTS, settings),
+            new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(GuiditeArmorMaterial.BASE_DURABILITY))
+    );
+
 
     // register method of Item Object
     public static Item register(
@@ -48,6 +72,10 @@ public class ModItems {
         // register itemGroup
         ItemGroupEvents.modifyEntriesEvent(ModItemGroups.CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(PINK_GARNET);
+            itemGroup.add(GUIDITE_HELMET);
+            itemGroup.add(GUIDITE_CHESTPLATE);
+            itemGroup.add(GUIDITE_LEGGINGS);
+            itemGroup.add(GUIDITE_BOOTS);
         });
     }
 }
