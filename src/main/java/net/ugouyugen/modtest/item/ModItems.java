@@ -2,7 +2,6 @@ package net.ugouyugen.modtest.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -47,7 +46,7 @@ public class ModItems {
     public static void registerModItems() {
         ModTest.LOGGER.info("Registering ModItems for" + ModTest.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(itemGroup -> {
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroups.CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(PINK_GARNET);
         });
     }
