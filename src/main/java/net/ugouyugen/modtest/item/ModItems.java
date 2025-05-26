@@ -48,6 +48,11 @@ public class ModItems {
             settings -> new SwordItem(GuiditeToolMaterial.INSTANCE, 1f, 1f, settings),
             new Item.Settings()
     );
+    public static final Item LIGHTNING_STICK = register(
+            "lightning_stick",
+            LightningStick::new,
+            new Item.Settings()
+    );
 
 
     // register method of Item Object
@@ -83,6 +88,7 @@ public class ModItems {
             itemGroup.add(GUIDITE_LEGGINGS);
             itemGroup.add(GUIDITE_BOOTS);
             itemGroup.add(GUIDITE_SWORD);
+            itemGroup.add(LIGHTNING_STICK);
         });
     }
 }
