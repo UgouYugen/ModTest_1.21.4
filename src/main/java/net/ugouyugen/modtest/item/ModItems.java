@@ -3,6 +3,7 @@ package net.ugouyugen.modtest.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -42,6 +43,11 @@ public class ModItems {
             settings -> new ArmorItem(GuiditeArmorMaterial.INSTANCE, EquipmentType.BOOTS, settings),
             new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(GuiditeArmorMaterial.BASE_DURABILITY))
     );
+    public static final Item GUIDITE_SWORD = register(
+            "guidite_sword",
+            settings -> new SwordItem(GuiditeToolMaterial.INSTANCE, 1f, 1f, settings),
+            new Item.Settings()
+    );
 
 
     // register method of Item Object
@@ -76,6 +82,7 @@ public class ModItems {
             itemGroup.add(GUIDITE_CHESTPLATE);
             itemGroup.add(GUIDITE_LEGGINGS);
             itemGroup.add(GUIDITE_BOOTS);
+            itemGroup.add(GUIDITE_SWORD);
         });
     }
 }
