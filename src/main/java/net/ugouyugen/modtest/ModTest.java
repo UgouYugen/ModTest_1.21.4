@@ -2,6 +2,7 @@ package net.ugouyugen.modtest;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.ugouyugen.modtest.block.ModBlocks;
 import net.ugouyugen.modtest.item.ModItemGroups;
 import net.ugouyugen.modtest.item.ModItems;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ public class ModTest implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModItemGroups.registerModItemGroups();
 	}
 }

@@ -42,10 +42,10 @@ public class ModItems {
         return item;
     }
 
-    // initialize method, which is to be passed onInitialize method of ModTest class
+    // initialize method
     public static void registerModItems() {
-        ModTest.LOGGER.info("Registering ModItems for" + ModTest.MOD_ID);
-
+        ModTest.LOGGER.info("Registering ModItems for " + ModTest.MOD_ID);
+        // register itemGroup
         ItemGroupEvents.modifyEntriesEvent(ModItemGroups.CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(PINK_GARNET);
         });
