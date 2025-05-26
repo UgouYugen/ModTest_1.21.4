@@ -9,5 +9,6 @@
   "item.modtest.guidite_sword": "guidite_sword",
   "item.modtest.lightning_stick": "lightning_stick",
   "effect.modtest.tater": "Tater",
-  "item.minecraft.potion.effect.tater": "Tater_Potion"
+  "item.minecraft.potion.effect.tater": "Tater_Potion",
+  "item.modtest.condensed_oak_log": "Condensed Oak Log"
 }

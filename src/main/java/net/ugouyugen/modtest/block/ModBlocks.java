@@ -3,6 +3,7 @@ package net.ugouyugen.modtest.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -26,6 +27,14 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.GRASS)
                     .strength(1.0f, 6.0f)
                     .requiresTool(),
+            true
+    );
+    // CONDENSED_OAK_LOG: This block has different images between top and side.
+    public static final Block CONDENSED_OAK_LOG = register(
+            "condensed_oak_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.WOOD),
             true
     );
 
@@ -72,6 +81,7 @@ public class ModBlocks {
         // register itemGroup
         ItemGroupEvents.modifyEntriesEvent(ModItemGroups.CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(CONDENSED_DIRT);
+            itemGroup.add(CONDENSED_OAK_LOG);
         });
     }
 }
