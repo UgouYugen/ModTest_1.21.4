@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.ugouyugen.modtest.block.ModBlocks;
 import net.ugouyugen.modtest.item.ModItemGroups;
 import net.ugouyugen.modtest.item.ModItems;
+import net.ugouyugen.modtest.potion.ModPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +20,6 @@ public class ModTest implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerModItemGroups();
+		ModPotions.registerModPotions();
 	}
 }
